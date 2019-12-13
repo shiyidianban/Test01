@@ -11,10 +11,9 @@
     
 ### 4.多线程使用            
     位置：com.example.demo.test01.thread
-    
-    
+
 ## Idea相关配置
-### 1.自动生成文件
+### 1.自动生成文件注释
     File -> Settings -> Editor -> File and Code Templates   
 ```java
 /**
