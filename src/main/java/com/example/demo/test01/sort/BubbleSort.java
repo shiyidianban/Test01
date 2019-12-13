@@ -3,7 +3,7 @@ package com.example.demo.test01.sort;
 /**
  * @author wu161 2018年8月28日下午12:30:54
  * 时间复杂度       最差		最好		   状态            空间复杂度
- * 冒泡排序	O(n2)	O(n2)	    稳定	O(1)
+ * 冒泡排序	       O(n2)	O(n2)	       稳定	           O(1)
  */
 public class BubbleSort {
 

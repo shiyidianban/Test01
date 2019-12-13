@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @author wu161 2018年8月28日下午1:16:11
  * 时间复杂度       最差		            最好    		   状态            空间复杂度
- * 堆排序   	O(n*log2n)	O(n*log2n)	   不稳定	O(1)
+ * 堆排序   	O(n*log2n)	                O(n*log2n)	       不稳定          O(1)
  */
 public class HeapSort {
 

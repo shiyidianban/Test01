@@ -1,9 +1,10 @@
 package com.example.demo.test01.thread;
 
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import lombok.SneakyThrows;
+
+import java.util.concurrent.*;
 
 /**
  * @Author FLY
@@ -14,9 +15,70 @@ import java.util.concurrent.TimeUnit;
 public class ExecutorThreadPoolExecutor {
 
     public static void main(String[] args) {
-        ExecutorService executorService = new ThreadPoolExecutor(2, 2,
-                0, TimeUnit.SECONDS,
-                new ArrayBlockingQueue<>(512), // 使用有界队列，避免OOM
-                new ThreadPoolExecutor.DiscardPolicy());
+        ExecutorService pool = new ThreadPoolExecutor(2, 3, 0, TimeUnit.SECONDS, new LinkedBlockingQueue<>(2));
+        //任务1
+        pool.execute(new Runnable() {
+
+            @SneakyThrows
+            @Override
+            public void run() {
+                System.out.println("-------------helloworld_001---------------" + Thread.currentThread().getName());
+            }
+        });
+
+/*        try {
+            //主线程睡2秒
+            Thread.sleep(2*1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }*/
+
+        pool.submit(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("-----------hrm------------" + Thread.currentThread().getName());
+            }
+        });
+
+        //任务2
+        pool.execute(new Runnable() {
+
+            @SneakyThrows
+            @Override
+            public void run() {
+                System.out.println("-------------helloworld_002---------------" + Thread.currentThread().getName());
+            }
+        });
+
+        // 任务3
+        pool.execute(new Runnable() {
+
+            @Override
+            public void run() {
+                System.out.println("-------------helloworld_003---------------" + Thread.currentThread().getName());
+            }
+        });
+
+        // 任务4
+        pool.execute(new Runnable() {
+
+            @Override
+            public void run() {
+                System.out.println("-------------helloworld_004---------------" + Thread.currentThread().getName());
+            }
+        });
+
+        // 任务5
+        pool.execute(new Runnable() {
+
+            @Override
+            public void run() {
+                System.out.println("-------------helloworld_005---------------" + Thread.currentThread().getName());
+            }
+        });
+
+
+
+        pool.shutdown();
     }
 }

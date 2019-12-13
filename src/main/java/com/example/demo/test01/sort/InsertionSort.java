@@ -3,7 +3,7 @@ package com.example.demo.test01.sort;
 /**
  * @author wu161 2018年8月28日下午1:09:33
  * 时间复杂度       最差		最好		    状态            空间复杂度
- * 插入排序        O(n2)	O(n2)	    稳定	O(1)
+ * 插入排序        O(n2)	    O(n2)	        稳定	        O(1)
  */
 public class InsertionSort {
 

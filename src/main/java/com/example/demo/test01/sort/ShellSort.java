@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @author wu161 2018年8月28日下午1:19:39
  * 时间复杂度       最差		最好	        状态            空间复杂度
- * 希尔排序	O	    O	        不稳定	O(1)
+ * 希尔排序	       O	    O	            不稳定	        O(1)
  */
 public class ShellSort {
 

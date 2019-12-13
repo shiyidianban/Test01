@@ -3,7 +3,7 @@ package com.example.demo.test01.sort;
 /**
  * @author wu161 2018年8月28日下午12:52:35
  * 时间复杂度       最差		最好		            状态            空间复杂度
- * 快速排序	O(n2)	O(n*log2n)	不稳定	O(log2n)~O(n)
+ * 快速排序	       O(n2)	O(n*log2n)          	不稳定         	O(log2n)~O(n)
  */
 public class QuickSort {
 

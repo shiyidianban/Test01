@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @author wu161 2018年8月28日下午1:04:37
  * 时间复杂度       最差		最好		            状态            空间复杂度
- * 二叉树排序	O(n2)	O(n*log2n)	不稳定	O(n)
+ * 二叉树排序       O(n2)	O(n*log2n)	            不稳定	        O(n)
  */
 public class BinaryTreeSort {
 
