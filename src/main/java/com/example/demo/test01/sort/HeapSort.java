@@ -36,11 +36,13 @@ public class HeapSort {
             a[0] = a[i];
             a[i] = temp;
             adjustHeap(a, 0, i - 1);// 将a中前i-1个记录重新调整为大顶堆
+            System.out.println(Arrays.toString(a));
         }
     }
 
     public static void main(String[] args) {
         int a[] = {51, 46, 20, 18, 65, 97, 82, 30, 77, 50};
+        System.out.println(Arrays.toString(a));
         heapSort(a);
         System.out.println(Arrays.toString(a));
     }

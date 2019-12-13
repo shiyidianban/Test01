@@ -1,5 +1,8 @@
 package com.example.demo.test01.sort;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 /**
  * @author wu161 2018年8月28日下午12:52:35
  * 时间复杂度       最差		最好		            状态            空间复杂度
@@ -11,10 +14,9 @@ public class QuickSort {
         int[] a = {12, 20, 5, 16, 15, 1, 30, 45, 23, 9};
         int start = 0;
         int end = a.length - 1;
+        System.out.println(Arrays.toString(a));
         quickSort(a, start, end);
-        for (int i = 0; i < a.length; i++) {
-            System.out.print(a[i] + " ");
-        }
+        System.out.println(Arrays.toString(a));
 
     }
 
@@ -42,6 +44,7 @@ public class QuickSort {
             }
             // 此时第一次循环比较结束，关键值的位置已经确定了。左边的值都比关键值小，右边的值都比关键值大，但是两边的顺序还有可能是不一样的，进行下面的递归调用
         }
+        System.out.println(Arrays.toString(a));
         // 递归
         if (start > low)
             quickSort(a, low, start - 1);// 左边序列。第一个索引位置到关键值索引-1
