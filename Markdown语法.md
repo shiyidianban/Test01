@@ -38,7 +38,7 @@
 
 示例：
 
-这是去往 [本人博客](http://ghosertblog.github.com) 的链接。
+这是去往 [本人Github](https://github.com/shiyidianban/Test01) 的链接。
 
 ### 4. 无序列表
 
