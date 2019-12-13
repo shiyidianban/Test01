@@ -16,7 +16,7 @@
 ##Idea相关配置
 
 ###1.自动生成文件
-File | Settings | Editor | File and Code Templates   
+    File -> Settings -> Editor -> File and Code Templates   
 ```java
 /**
 *@Author FLY
