@@ -15,7 +15,7 @@
 ### 5.Java基本类型            
     class 位置：com.example.demo.test02.PrimitiveTypeTest
 
-### 5.反射和类加载机制            
+### 6.反射和类加载机制            
     package 位置：com.example.demo.test02.clazz
 
 ## Idea相关配置
