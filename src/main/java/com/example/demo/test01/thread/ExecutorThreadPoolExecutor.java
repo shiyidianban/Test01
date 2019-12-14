@@ -15,7 +15,7 @@ import java.util.concurrent.*;
 public class ExecutorThreadPoolExecutor {
 
     public static void main(String[] args) {
-        ExecutorService pool = new ThreadPoolExecutor(2, 3, 0, TimeUnit.SECONDS, new LinkedBlockingQueue<>(2));
+        ExecutorService pool = new ThreadPoolExecutor(1, 1, 0, TimeUnit.SECONDS, new LinkedBlockingQueue<>());
         //任务1
         pool.execute(new Runnable() {
 
@@ -32,13 +32,6 @@ public class ExecutorThreadPoolExecutor {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }*/
-
-        pool.submit(new Runnable() {
-            @Override
-            public void run() {
-                System.out.println("-----------hrm------------" + Thread.currentThread().getName());
-            }
-        });
 
         //任务2
         pool.execute(new Runnable() {
