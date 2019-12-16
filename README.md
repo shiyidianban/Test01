@@ -20,7 +20,7 @@ package 位置：[com.example.demo.test02.clazz](src/main/java/com/example/demo/
     
 ### 7.IO流
 java流结构类图
-![Alt text](src/main/resources/img/io.jpg)
+![io.png](src/main/resources/img/io.jpg)
 
 
 ## Idea相关配置
