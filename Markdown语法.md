@@ -329,6 +329,7 @@ D-->>A: Dashed open arrow
         <th>星期三</th>
     </tr>
     <tr>
+        <td></td>
         <td>李强</td>
         <td>张明</td>
         <td>王平</td>
