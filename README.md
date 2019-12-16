@@ -1,19 +1,19 @@
 # Test01
 ## 练习项目
 ### 1.八种排序方法
-package 位置：com.example.demo.test01.sort
+package 位置：[com.example.demo.test01.sort](src/main/java/com/example/demo/test01/sort)
 
 ### 2.剑指offer
-package 位置：com.example.demo.test01.offer
+package 位置：[com.example.demo.test01.offer](src/main/java/com/example/demo/test01/offer)
 
 ### 3.练习题
-package 位置：com.example.demo.test01.test
+package 位置：[com.example.demo.test01.test](src/main/java/com/example/demo/test01/test)
     
 ### 4.多线程使用            
-package 位置：com.example.demo.test01.thread
+package 位置：[com.example.demo.test01.thread](src/main/java/com/example/demo/test01/thread)
     
 ### 5.Java基本类型            
-class 位置：com.example.demo.test02.PrimitiveTypeTest
+class 位置：[com.example.demo.test02.PrimitiveTypeTest](src/main/java/com/example/demo/test02/PrimitiveTypeTest)
 
 ### 6.反射和类加载机制            
 package 位置：[com.example.demo.test02.clazz](src/main/java/com/example/demo/test02/clazz)
