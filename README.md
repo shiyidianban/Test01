@@ -26,7 +26,7 @@ package 位置：[com.example.demo.test02.ioStream](src/main/java/com/example/de
 
 java流结构类图
 
-![io.png](src/main/resources/img/io.jpg)
+![io1.png](src/main/resources/img/io1.png)
 
 
 ## Idea相关配置
