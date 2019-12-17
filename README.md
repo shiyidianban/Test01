@@ -1,4 +1,8 @@
 # Test01
+java知识点框架
+
+![java.png](src/main/resources/img/java.png)
+
 ## 练习项目
 ### 1.八种排序方法
 package 位置：[com.example.demo.test01.sort](src/main/java/com/example/demo/test01/sort)
@@ -20,7 +24,10 @@ class 位置：[com.example.demo.test02.PrimitiveTypeTest](src/main/java/com/exa
 
 ### 6.反射和类加载机制            
 package 位置：[com.example.demo.test02.clazz](src/main/java/com/example/demo/test02/clazz)
-    
+ 
+java类加载图
+
+![a1.png](src/main/resources/img/loader.png)  
 ### 7.IO流
 package 位置：[com.example.demo.test02.ioStream](src/main/java/com/example/demo/test02/ioStream)
 
@@ -28,6 +35,14 @@ java流结构类图
 
 ![io1.png](src/main/resources/img/io1.png)
 
+### 8.java集合类
+Java集合框架图
+
+![list01.png](src/main/resources/img/list01.png)
+
+整理后的缩减版，list的相关
+
+![list02.png](src/main/resources/img/list02.png)
 
 ## Idea相关配置
 ### 1.自动生成文件注释
