@@ -36,13 +36,7 @@ java流结构类图
 ![io1.png](src/main/resources/img/io1.png)
 
 ### 8.java集合类
-Java集合框架图
-
-![list01.png](src/main/resources/img/list01.png)
-
-整理后的缩减版，list的相关
-
-![list02.png](src/main/resources/img/list02.png)
+package 位置：[com.example.demo.test02.collectionTest](src/main/java/com/example/demo/test02/collectionTest)
 
 ## Idea相关配置
 ### 1.自动生成文件注释
@@ -50,9 +44,9 @@ Java集合框架图
 ```java
 /**
 * @Author FLY
-* @Createdate ${YEAR}-${MONTH}-${DAY} ${TIME}
+* @CreateDate ${YEAR}-${MONTH}-${DAY} ${TIME}
 * @ProjectName ${PROJECT_NAME}
-* @Desc ${PACKAGE_NAME}
+* @Desc 
 */
 ```
 ### 2.设置编程文字样式
