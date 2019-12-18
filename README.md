@@ -38,6 +38,13 @@ java流结构类图
 ### 8.java集合类
 package 位置：[com.example.demo.test02.collectionTest](src/main/java/com/example/demo/test02/collectionTest)
 
+## 其他模版代码
+### 1.word转pdf
+package 位置：[com.example.demo.test02.word](src/main/java/com/example/demo/test02/word)
+
+### 2.mybatis反向生成代码
+package 位置：[com.example.demo.test02.mybatis](src/main/java/com/example/demo/test02/mybatis)
+
 ## Idea相关配置
 ### 1.自动生成文件注释
     File -> Settings -> Editor -> File and Code Templates   
@@ -52,22 +59,3 @@ package 位置：[com.example.demo.test02.collectionTest](src/main/java/com/exam
 ### 2.设置编程文字样式
     File -> Settings -> Editor -> Font
     设置样式为“consolas”，字体大小一般为16
-
-## Maven相关配置
-### 1.添加本地依赖
-模版
-```java
-<dependency>
-    <groupId> e-iceblue </groupId>
-    <artifactId>spire.doc.free</artifactId>
-    <scope>system</scope>
-    <systemPath>${basedir}/libs/spire.doc.free-2.7.3.jar</systemPath>
-</dependency>
-```
-
-## 其他模版代码
-### 1.word转pdf
-package 位置：[com.example.demo.test02.word](src/main/java/com/example/demo/test02/word)
-
-### 2.mybatis反向生成代码
-package 位置：[com.example.demo.test02.mybatis](src/main/java/com/example/demo/test02/mybatis)

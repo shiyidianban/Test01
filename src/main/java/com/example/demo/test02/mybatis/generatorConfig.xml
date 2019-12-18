@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!--<properties resource="jdbc.properties"/>-->
+
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <!--处理sql中的`符号-->
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <!--添加自定义的继承接口-->
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>
+        </plugin>
+
+        <!--数据源配置-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://192.168.0.201:3307/hrm"
+                        userId="user_hrm"
+                        password="leishu2018">
+        </jdbcConnection>
+
+        <!--model包路径-->
+        <javaModelGenerator targetPackage="com.thundersdata.hrm.model" targetProject="src/main/java"/>
+        <!--mapper.xml包路径-->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+        <!--mapper包路径-->
+        <javaClientGenerator targetPackage="com.thundersdata.hrm.mapper" targetProject="src/main/java"
+                             type="XMLMAPPER"/>
+        <!--表配置，tableName支持%，表示全部生成-->
+        <!--<table tableName="hrm_dict" domainObjectName="HrmDict">-->
+        <!--<generatedKey column="id" sqlStatement="Mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="hrm_apply" domainObjectName="HrmApply">-->
+        <!--<generatedKey column="apply_code" sqlStatement="Mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="hrm_employee" domainObjectName="HrmEmployee">-->
+        <!--<generatedKey column="employee_code" sqlStatement="Mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="hrm_interview" domainObjectName="HrmInterview">-->
+        <!--<generatedKey column="interview_code" sqlStatement="Mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="hrm_person" domainObjectName="HrmPerson">-->
+        <!--<generatedKey column="person_code" sqlStatement="Mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="hrm_person_pool" domainObjectName="HrmPersonPool">-->
+        <!--<generatedKey column="pool_code" sqlStatement="Mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="hrm_person_pool_map" domainObjectName="HrmPersonPoolMap">-->
+        <!--<generatedKey column="id" sqlStatement="Mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="hrm_post" domainObjectName="HrmPost">-->
+        <!--<generatedKey column="post_code" sqlStatement="Mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="hrm_tenant" domainObjectName="HrmTenant">
+            <generatedKey column="tenant_code" sqlStatement="Mysql" identity="true"/>
+        </table>-->
+
+        <table tableName="hrm_job_category" domainObjectName="HrmJobCategory">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+
+
+
+
+    </context>
+</generatorConfiguration>
