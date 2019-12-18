@@ -64,7 +64,7 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
         </dependency>
-
+        <!--word转pdf-->
         <dependency>
             <groupId> e-iceblue </groupId>
             <artifactId>spire.doc.free</artifactId>
@@ -72,6 +72,18 @@
             <systemPath>${basedir}/libs/spire.doc.free-2.7.3.jar</systemPath>
         </dependency>
 
+        <!--SpringBoot本地连接redis-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <!--java本地连接redis-->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>3.2.0</version>
+        </dependency>
 
     </dependencies>
 

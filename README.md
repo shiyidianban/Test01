@@ -19,7 +19,7 @@ package 位置：[com.example.demo.test01.thread](src/main/java/com/example/demo
 ### 5.Java基本类型            
 class 位置：[com.example.demo.test02.PrimitiveTypeTest](src/main/java/com/example/demo/test02/PrimitiveTypeTest)
 
-结果图片：
+结果图片：  
 ![basicType.jpg](src/main/resources/img/basicType.jpg)
 
 ### 6.反射和类加载机制            
@@ -31,8 +31,7 @@ java类加载图
 ### 7.IO流
 package 位置：[com.example.demo.test02.ioStream](src/main/java/com/example/demo/test02/ioStream)
 
-java流结构类图
-
+java流结构类图  
 ![io1.png](src/main/resources/img/io1.png)
 
 ### 8.java集合类
