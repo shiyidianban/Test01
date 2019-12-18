@@ -17,7 +17,7 @@ package 位置：[com.example.demo.test01.test](src/main/java/com/example/demo/t
 package 位置：[com.example.demo.test01.thread](src/main/java/com/example/demo/test01/thread)
     
 ### 5.Java基本类型            
-class 位置：[com.example.demo.test02.PrimitiveTypeTest](src/main/java/com/example/demo/test02/PrimitiveTypeTest)
+class 位置：[com.example.demo.test02.PrimitiveTypeTest](src/main/java/com/example/demo/test02/PrimitiveTypeTest.java)
 
 结果图片：  
 ![basicType.jpg](src/main/resources/img/basicType.jpg)
@@ -28,6 +28,7 @@ package 位置：[com.example.demo.test02.clazz](src/main/java/com/example/demo/
 java类加载图
 
 ![a1.png](src/main/resources/img/loader.png)  
+
 ### 7.IO流
 package 位置：[com.example.demo.test02.ioStream](src/main/java/com/example/demo/test02/ioStream)
 
@@ -43,6 +44,9 @@ package 位置：[com.example.demo.test02.word](src/main/java/com/example/demo/t
 
 ### 2.mybatis反向生成代码
 package 位置：[com.example.demo.test02.mybatis](src/main/java/com/example/demo/test02/mybatis)
+
+### 3.Redis基本配置
+package 位置：[com.example.demo.test02.redis](src/main/java/com/example/demo/test02/redis)
 
 ## Idea相关配置
 ### 1.自动生成文件注释
