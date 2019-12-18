@@ -50,6 +50,7 @@ java具体引用代码：
 
 
 ----------------------------
+### Jedis配置
 上面是SpringBoot调用redis，下面要讲的是java调用redis，使用jedis的jar包
 maven导入依赖
 ```xml
