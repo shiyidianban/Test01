@@ -1,4 +1,4 @@
-# Redis基本配置
+# Redis基本配置  
 
 redis是一个key-value存储系统。  
 和Memcached类似，它支持存储的value类型相对更多，
@@ -85,3 +85,22 @@ poolconfig.setMaxTotal(Integer.parseInt(pro.get("redis.maxTotal").toString()));/
 pool = new JedisPool(poolconfig,pro.getProperty("redis.url"), Integer.parseInt(pro.get("redis.port").toString()));
 ```
 模板如[JedisPoolUtils](JedisPoolUtils.java) 和 [RedisTest03](RedisTest03.java)
+
+--------------------------------------------------------------
+### Redis命令
+[Redis的基础知识](https://www.cnblogs.com/xinhuaxuan/p/9171275.html)
+
+##### string
+![string](../../../../../../resources/img/redis-string.png)
+
+##### list
+![list](../../../../../../resources/img/redis-list.png)
+
+##### hash
+![hash](../../../../../../resources/img/redis-hash.png)
+
+##### set
+![set](../../../../../../resources/img/redis-set.png)
+
+##### zset
+![zset](../../../../../../resources/img/redis-zset.png)

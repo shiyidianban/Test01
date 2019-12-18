@@ -4,9 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 import redis.clients.jedis.Jedis;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @Author FLY
@@ -64,16 +62,6 @@ public class RedisTest02 {
     }
 
     /**
-     * 删除redis
-     * @param key
-     * @param count
-     * @param value
-     */
-    public void remValue(String key,int count,String value){
-        jedis.lrem(key, count, value);
-    }
-
-    /**
      * 查看redis
      */
     @Test
@@ -87,6 +75,30 @@ public class RedisTest02 {
         List<String> list1 = jedis.lrange("site-list", 0 ,-1);
         for(int i=0; i<list1.size(); i++) {
             System.out.println("列表项为: "+list1.get(i));
+        }
+    }
+
+    /**
+     * 插入map
+     */
+    @Test
+    public void setMap(){
+        System.out.println(jedis.hset("user", "name", "xiaoming"));
+        Map<String,String> map = new HashMap<>();
+        map.put("age","23");
+        map.put("address","China");
+        System.out.println(jedis.hmset("user",map));
+    }
+
+    /**
+     * 获取map集合
+     */
+    @Test
+    public void getMap(){
+        System.out.println( jedis.hget("user","name"));
+        Map<String, String> ruleMap = jedis.hgetAll("user");
+        for(String s:ruleMap.keySet()){
+            System.out.println("key : "+s+" value : "+ruleMap.get(s));
         }
     }
 }
