@@ -62,3 +62,15 @@ package 位置：[com.example.demo.test02.redis](src/main/java/com/example/demo/
 ### 2.设置编程文字样式
     File -> Settings -> Editor -> Font
     设置样式为“consolas”，字体大小一般为16
+    
+### 3.Dao接口跳转到实现类(mapper.xml文件)
+    1. File -> Settings -> Plugins 
+    2. 搜索插件“Free MyBatis plugin”
+    
+### 4.设置idea快捷键
+>1. File -> Settings -> Keymap  
+>2. 设置键盘风格，一般喜欢用eclipse
+>3. ctrl+T是eclipse的风格，直接从方法跳转到接口的实现类    
+>4. 搜索“navigate”设置idea回退到上一步快捷键
+如图所示
+![idea01.jpg](src/main/resources/img/idea01.jpg)
