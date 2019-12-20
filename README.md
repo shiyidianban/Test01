@@ -38,6 +38,10 @@ java流结构类图
 ### 8.java集合类
 package 位置：[com.example.demo.test02.collectionTest](src/main/java/com/example/demo/test02/collectionTest)
 
+### 9.动态规划问题            
+package 位置：[com.example.demo.test02.Suanfa](src/main/java/com/example/demo/test02/Suanfa)
+
+
 ## 其他模版代码
 ### 1.word转pdf
 package 位置：[com.example.demo.test02.word](src/main/java/com/example/demo/test02/word)

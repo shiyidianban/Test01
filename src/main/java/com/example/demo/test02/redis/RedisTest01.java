@@ -6,6 +6,8 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * @Author FLY
  * @CreateDate 2019-12-18 10:31
@@ -33,7 +35,7 @@ public class RedisTest01 {
      * 放入数据
      */
     public void setStringRedisTemplate(){
-        stringRedisTemplate.opsForValue().set("str1","ttttt");
+        stringRedisTemplate.opsForValue().set("str1","ttttt",10, TimeUnit.SECONDS);
         System.out.println("添加成功");
     }
 
@@ -43,7 +45,7 @@ public class RedisTest01 {
     }
 
     public void setRedisTemplate(){
-        redisTemplate.opsForValue().set("str2","ttttt");
+        redisTemplate.opsForValue().set("str2","ttttt",10, TimeUnit.SECONDS);
         System.out.println("添加成功");
     }
 

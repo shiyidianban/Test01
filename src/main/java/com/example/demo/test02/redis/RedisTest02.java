@@ -20,6 +20,7 @@ public class RedisTest02 {
     public void setRedis(){
         //连接本地的 Redis 服务
         jedis = new Jedis("localhost");
+        jedis.select(1);
         System.out.println("连接成功");
         System.out.println(jedis.ping());
     }
@@ -46,7 +47,7 @@ public class RedisTest02 {
         //设置 redis 字符串数据
         jedis.set("key2", "test2");
         // 获取存储的数据并输出
-        System.out.println("redis 存储的字符串为: "+ jedis.get("key2"));
+        System.out.println("redis 存储的字符串为: "+ jedis.get("key2")+" ，"+jedis.getDB());
     }
 
     /**
@@ -88,6 +89,7 @@ public class RedisTest02 {
         map.put("age","23");
         map.put("address","China");
         System.out.println(jedis.hmset("user",map));
+        jedis.expire("user", 10);
     }
 
     /**
