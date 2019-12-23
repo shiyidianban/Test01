@@ -70,6 +70,7 @@ package 位置：[com.example.demo.test02.redis](src/main/java/com/example/demo/
 ### 3.Dao接口跳转到实现类(mapper.xml文件)
     1. File -> Settings -> Plugins 
     2. 搜索插件“Free MyBatis plugin”
+    3. 或者去官网搜索插件进行下载，然后导入插件
     
 ### 4.设置idea快捷键
 >1. File -> Settings -> Keymap  

@@ -48,3 +48,25 @@ class 位置 [com.example.demo.test02.Suanfa.DynamicTest05.java](DynamicTest05.j
 
 class 位置 [com.example.demo.test02.Suanfa.DynamicTest06.java](DynamicTest06.java)
 
+#### 7. 最大子段和
+>N个整数组成的序列a[1],a[2],a[3],…,a[n]，求该序列如a[i]+a[i+1]+…+a[j]的连续子段和的最大值。  
+当所给的整数均为负数时和为0。   
+例如：-2,11,-4,13,-5,-2，和最大的子段为：11,-4,13。和为20。
+
+class 位置 [com.example.demo.test02.Suanfa.DynamicTest07.java](DynamicTest07.java)
+
+#### 8. 最长公共子序列Lcs
+>给出两个字符串A B，求A与B的最长公共子序列（子序列不要求是连续的）。  
+比如两个串为：  
+　　abcicba  
+　　abdkscab  
+ab是两个串的子序列，abc也是，abca也是，其中abca是这两个字符串最长的子序列。
+
+class 位置 [com.example.demo.test02.Suanfa.DynamicTest08.java](DynamicTest08.java)
+
+#### 9. 正整数分组
+>将一堆正整数分为2组，要求2组的和相差最小。    
+例如：1 2 3 4 5，将1 2 4分为1组，3 5分为1组，两组和相差1，是所有方案中相差最少的。
+
+class 位置 [com.example.demo.test02.Suanfa.DynamicTest09.java](DynamicTest09.java)
+
