@@ -28,6 +28,7 @@ public class DynamicTest05 {
                     dp[j] = dp[j];
         for (int i = 0; i < w + 1; i++)
             max = max > dp[i] ? max : dp[i];
+
         System.out.println(max);
     }
 }
