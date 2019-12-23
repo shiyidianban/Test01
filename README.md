@@ -16,8 +16,8 @@ package 位置：[com.example.demo.test01.test](src/main/java/com/example/demo/t
 ### 4.多线程使用            
 package 位置：[com.example.demo.test01.thread](src/main/java/com/example/demo/test01/thread)
     
-### 5.Java基本类型            
-class 位置：[com.example.demo.test02.PrimitiveTypeTest](src/main/java/com/example/demo/test02/PrimitiveTypeTest.java)
+### 5.Java基本知识            
+package 位置：[com.example.demo.test02.javaBasic](src/main/java/com/example/demo/test02/javaBasic)
 
 结果图片：  
 ![basicType.jpg](src/main/resources/img/basicType.jpg)

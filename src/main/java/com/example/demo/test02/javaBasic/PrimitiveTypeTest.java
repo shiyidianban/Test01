@@ -1,4 +1,4 @@
-package com.example.demo.test02;
+package com.example.demo.test02.javaBasic;
 
 /**
  * @Author FLY
