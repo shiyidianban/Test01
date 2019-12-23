@@ -1,4 +1,4 @@
-package com.example.demo.test02.Suanfa;
+package com.example.demo.test02.suanfa;
 
 import org.junit.Test;
 

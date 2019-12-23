@@ -1,7 +1,4 @@
-package com.example.demo.test02.Suanfa;
-
-import org.junit.Before;
-import org.junit.Test;
+package com.example.demo.test02.suanfa;
 
 /**
  * @Author FLY

@@ -39,7 +39,7 @@ java流结构类图
 package 位置：[com.example.demo.test02.collectionTest](src/main/java/com/example/demo/test02/collectionTest)
 
 ### 9.动态规划问题            
-package 位置：[com.example.demo.test02.Suanfa](src/main/java/com/example/demo/test02/Suanfa)
+package 位置：[com.example.demo.test02.suanfa](src/main/java/com/example/demo/test02/suanfa)
 
 
 ## 其他模版代码
@@ -51,6 +51,10 @@ package 位置：[com.example.demo.test02.mybatis](src/main/java/com/example/dem
 
 ### 3.Redis基本配置
 package 位置：[com.example.demo.test02.redis](src/main/java/com/example/demo/test02/redis)
+
+### 4.sql父类子类查询
+package 位置：[com.example.demo.test02.sql.getTree.sql](src/main/java/com/example/demo/test02/sql/getTree.sql)
+
 
 ## Idea相关配置
 ### 1.自动生成文件注释
