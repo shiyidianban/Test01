@@ -1,15 +1,18 @@
+/*
 package com.example.demo.test02.word;
 
 import com.spire.doc.Document;
 import com.spire.doc.FileFormat;
 import com.spire.doc.ProtectionType;
 
+*/
 /**
  * @Author FLY
  * @CreateDate 2019-12-17 17:00
  * @ProjectName Test01
  * @Desc
- */
+ *//*
+
 public class Encrypt {
 
     public static void main(String[] args){
@@ -32,3 +35,4 @@ public class Encrypt {
     }
 
 }
+*/

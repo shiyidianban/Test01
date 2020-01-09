@@ -47,6 +47,7 @@ public class MultiPortEcho {
             SelectionKey key = ssc.register(selector, SelectionKey.OP_ACCEPT);
             System.out.println("Going to listen on " + ports[i]);
         }
+        Object o = new Object();
         //4. 开始循环，我们已经注册了一些IO兴趣事件
         while (true) {
             //这个方法会阻塞，直到至少有一个已注册的事件发生。当一个或者更多的事件发生时

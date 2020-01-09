@@ -33,7 +33,7 @@ java类加载图
 package 位置：[com.example.demo.test02.ioStream](src/main/java/com/example/demo/test02/ioStream)
 
 java流结构类图  
-![io1.png](src/main/resources/img/io1.png)
+![io3.png](src/main/resources/img/io3.png)
 
 ### 8.java集合类
 package 位置：[com.example.demo.test02.collectionTest](src/main/java/com/example/demo/test02/collectionTest)
