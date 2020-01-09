@@ -61,10 +61,8 @@ package 位置：[com.example.demo.test02.sql.getTree.sql](src/main/java/com/exa
     File -> Settings -> Editor -> File and Code Templates   
 ```java
 /**
-* @Author FLY
-* @CreateDate ${YEAR}-${MONTH}-${DAY} ${TIME}
-* @ProjectName ${PROJECT_NAME}
-* @Desc 
+* @author FLY
+* @date ${YEAR}-${MONTH}-${DAY} ${TIME}
 */
 ```
 ### 2.设置编程文字样式
