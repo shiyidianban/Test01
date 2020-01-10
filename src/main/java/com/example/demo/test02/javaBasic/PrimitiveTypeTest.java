@@ -1,10 +1,8 @@
 package com.example.demo.test02.javaBasic;
 
 /**
- * @Author FLY
- * @Createdate 2019-12-14 14:30
- * @ProjectName Test01
- * @Desc com.example.demo.test02
+ * @author FLY
+ * @date 2019-12-14 14:30
  */
 public class PrimitiveTypeTest {
 

@@ -9,10 +9,8 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Author FLY
- * @CreateDate 2019-12-17 13:57
- * @ProjectName Test01
- * @Desc
+ * @author FLY
+ * @date 2019-12-17 13:57
  */
 public class SerialTest {
 

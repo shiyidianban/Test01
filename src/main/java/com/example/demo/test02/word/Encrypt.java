@@ -7,10 +7,9 @@ import com.spire.doc.ProtectionType;
 
 */
 /**
- * @Author FLY
- * @CreateDate 2019-12-17 17:00
- * @ProjectName Test01
- * @Desc
+ * @author FLY
+ * @date 2019-12-17 17:00
+
  *//*
 
 public class Encrypt {

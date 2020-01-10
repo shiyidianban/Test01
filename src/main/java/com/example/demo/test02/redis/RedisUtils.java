@@ -11,10 +11,8 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Author FLY
- * @CreateDate 2019-12-18 11:54
- * @ProjectName Test01
- * @Desc
+ * @author FLY
+ * @date 2019-12-18 11:54
  */
 public class RedisUtils {
 

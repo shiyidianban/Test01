@@ -5,10 +5,9 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Author FLY
- * @Createdate 2019-12-12 16:08
- * @ProjectName Test01
- * @Desc com.example.demo.test01.thread
+ * @author FLY
+ * @date 2019-12-12 16:08
+ com.example.demo.test01.thread
  */
 public class ExecutorScheduledThreadPool {
 

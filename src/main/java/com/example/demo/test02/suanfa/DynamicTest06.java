@@ -3,10 +3,9 @@ package com.example.demo.test02.suanfa;
 import org.junit.Test;
 
 /**
- * @Author FLY
- * @CreateDate 2019-12-23 9:50
- * @ProjectName Test01
- * @Desc 最长递增子序列
+ * @author FLY
+ * @date 2019-12-23 9:50
+ * 最长递增子序列
  * 给出长度为N的数组，找出这个数组的最长递增子序列。
  * (递增子序列是指，子序列的元素是递增的）
  * 例如：5 1 6 8 2 4 5 10，最长递增子序列是1 2 4 5 10。

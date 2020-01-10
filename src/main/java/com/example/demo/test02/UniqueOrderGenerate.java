@@ -10,10 +10,8 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Author FLY
- * @CreateDate 2019-12-20 10:15
- * @ProjectName Test01
- * @Desc
+ * @author FLY
+ * @date 2019-12-20 10:15
  */
 public class UniqueOrderGenerate {
 
@@ -194,14 +192,14 @@ public class UniqueOrderGenerate {
                 @Override
                 public void run() {
                     Jedis jedis = pool.getResource();
-                    for (int i = 0; i < 10000; i++){
+                    for (int i = 0; i < 10000; i++) {
 //                        String id = String.valueOf(idWorker.nextId());
                         String id = CodeUtils.uniqueCode();
-                        if (jedis.exists(id)){
+                        if (jedis.exists(id)) {
                             System.out.println(String.format("插入redis的id冲突；%s  %s--------", Thread.currentThread().getName(), id));
-                        }else{
-                            jedis.set(id,Thread.currentThread().getName());
-                            jedis.expire(id,60);
+                        } else {
+                            jedis.set(id, Thread.currentThread().getName());
+                            jedis.expire(id, 60);
                             System.out.println(String.format("插入redis；%s  %s", Thread.currentThread().getName(), id));
                         }
                     }

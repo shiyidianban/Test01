@@ -91,16 +91,26 @@ pool = new JedisPool(poolconfig,pro.getProperty("redis.url"), Integer.parseInt(p
 [Redis的基础知识](https://www.cnblogs.com/xinhuaxuan/p/9171275.html)
 
 ##### string
+> String：字符串，可以存在String、Integer、Float型的数据，甚至是二进制数据，一个字符串最大容量是512M
+
 ![string](../../../../../../resources/img/redis-string.png)
 
 ##### list
+> List: 字符串List,底层实现上不是数组，而是链表，也就是说头部和尾部插入一个新元素，其时间复杂度是常数级别的；其弊端是：元素的定位比数组慢。
+
 ![list](../../../../../../resources/img/redis-list.png)
 
 ##### hash
+> Hash: 按Hash方式来存放字符串
+
 ![hash](../../../../../../resources/img/redis-hash.png)
 
 ##### set
+> Set: 字符串Set，无序不可重复，是通过HashTable实现的
+
 ![set](../../../../../../resources/img/redis-set.png)
 
 ##### zset
+> ZSet: 字符串set，有序且不可重复，根据Score来排序。底层使用散列表和跳跃表来实现，所以读取中间部分的数据也很快
+
 ![zset](../../../../../../resources/img/redis-zset.png)

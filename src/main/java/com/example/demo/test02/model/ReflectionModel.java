@@ -4,10 +4,8 @@ import lombok.Data;
 import lombok.ToString;
 
 /**
- * @Author FLY
- * @Createdate 2019-12-14 14:23
- * @ProjectName Test01
- * @Desc com.example.demo.test02.model
+ * @author FLY
+ * @date 2019-12-14 14:23
  */
 @Data
 @ToString

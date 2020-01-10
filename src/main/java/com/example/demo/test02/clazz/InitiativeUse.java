@@ -1,10 +1,8 @@
 package com.example.demo.test02.clazz;
 
 /**
- * @Author FLY
- * @Createdate 2019-12-16 18:54
- * @ProjectName Test01
- * @Desc com.example.demo.test02.clazz
+ * @author FLY
+ * @date 2019-12-16 18:54
  */
 public class InitiativeUse {
     public static void main(String[] args) {

@@ -4,10 +4,9 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * @Author FLY
- * @Createdate 2019-12-12 15:52
- * @ProjectName Test01
- * @Desc com.example.demo.test01.thread
+ * @author FLY
+ * @date 2019-12-12 15:52
+ com.example.demo.test01.thread
  */
 public class ExecutorFixedThreadPool {
 

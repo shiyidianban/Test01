@@ -8,10 +8,8 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 /**
- * @Author FLY
- * @Createdate 2019-12-14 14:14
- * @ProjectName Test01
- * @Desc com.example.demo.test02.clazz
+ * @author FLY
+ * @date 2019-12-14 14:14
  */
 @Slf4j
 public class ReflectionTest01 {

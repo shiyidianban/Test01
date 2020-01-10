@@ -9,10 +9,10 @@ import org.springframework.stereotype.Component;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Author FLY
- * @CreateDate 2019-12-18 10:31
- * @ProjectName Test01
- * @Desc 使用SpringBoot连接redis
+ * 使用SpringBoot连接redis
+ *
+ * @author FLY
+ * @date 2019-12-18 10:31
  */
 @Component
 public class RedisTest01 {
@@ -26,7 +26,7 @@ public class RedisTest01 {
     /**
      * 获取数据
      */
-    public void getStringRedisTemplate(){
+    public void getStringRedisTemplate() {
         String value = stringRedisTemplate.opsForValue().get("str1");
         System.out.println(value);
     }
@@ -34,18 +34,18 @@ public class RedisTest01 {
     /**
      * 放入数据
      */
-    public void setStringRedisTemplate(){
-        stringRedisTemplate.opsForValue().set("str1","ttttt",10, TimeUnit.SECONDS);
+    public void setStringRedisTemplate() {
+        stringRedisTemplate.opsForValue().set("str1", "ttttt", 10, TimeUnit.SECONDS);
         System.out.println("添加成功");
     }
 
-    public void getRedisTemplate(){
-        String value = (String)redisTemplate.opsForValue().get("str2");
+    public void getRedisTemplate() {
+        String value = (String) redisTemplate.opsForValue().get("str2");
         System.out.println(value);
     }
 
-    public void setRedisTemplate(){
-        redisTemplate.opsForValue().set("str2","ttttt",10, TimeUnit.SECONDS);
+    public void setRedisTemplate() {
+        redisTemplate.opsForValue().set("str2", "ttttt", 10, TimeUnit.SECONDS);
         System.out.println("添加成功");
     }
 

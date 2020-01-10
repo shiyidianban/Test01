@@ -1,10 +1,9 @@
 package com.example.demo.test02.suanfa;
 
 /**
- * @Author FLY
- * @CreateDate 2019-12-19 11:55
- * @ProjectName Test01
- * @Desc
+ * @author FLY
+ * @date 2019-12-19 11:55
+ * <p>
  * 给定两个序列 X 和 Y，如果 Z 即是 X 的子串，又是 Y 的子串，我们就称它是 X 和 Y 的公共子串，注意子串是连续的。
  * 例如 X = { A, B, C, D, E, F, G }，Y = { A, B, Z, D, E, F, K, G }，那么它们最长的公共子串即 { D, E, F }
  */
@@ -16,7 +15,7 @@ public class DynamicTest02 {
         System.out.println("最长公共子串长度：" + getLCS(s1, s2));
     }
 
-    public static int getLCS(String s1,String s2){
+    public static int getLCS(String s1, String s2) {
         char[] a = s1.toCharArray();
         char[] b = s2.toCharArray();
         // a.length行，b.length列

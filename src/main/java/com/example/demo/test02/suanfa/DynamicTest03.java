@@ -3,10 +3,9 @@ package com.example.demo.test02.suanfa;
 import org.junit.Test;
 
 /**
- * @Author FLY
- * @CreateDate 2019-12-19 17:40
- * @ProjectName Test01
- * @Desc 编辑距离，又称Levenshtein距离（也叫做Edit Distance），是指两个字串之间，由一个转成另一个所需的最少编辑操作次数。许可的编辑操作包括将一个字符替换成另一个字符，插入一个字符，删除一个字符。
+ * @author FLY
+ * @date 2019-12-19 17:40
+ * 编辑距离，又称Levenshtein距离（也叫做Edit Distance），是指两个字串之间，由一个转成另一个所需的最少编辑操作次数。许可的编辑操作包括将一个字符替换成另一个字符，插入一个字符，删除一个字符。
  * 例如将kitten一字转成sitting：
  * sitten （k->s）
  * sittin （e->i）

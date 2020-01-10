@@ -1,16 +1,15 @@
 package com.example.demo.test02.suanfa;
 
 /**
- * @Author FLY
- * @CreateDate 2019-12-23 11:25
- * @ProjectName Test01
- * @Desc 最长公共子序列Lcs
+ * @author FLY
+ * @date 2019-12-23 11:25
+ * 最长公共子序列Lcs
  * 给出两个字符串A B，求A与B的最长公共子序列（子序列不要求是连续的）。
  * 比如两个串为：
- *
+ * <p>
  * abcicba
  * abdkscab
- *
+ * <p>
  * ab是两个串的子序列，abc也是，abca也是，其中abca是这两个字符串最长的子序列。
  */
 public class DynamicTest08 {

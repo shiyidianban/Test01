@@ -4,10 +4,8 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @Author FLY
- * @CreateDate 2019-12-17 14:51
- * @ProjectName Test01
- * @Desc
+ * @author FLY
+ * @date 2019-12-17 14:51
  */
 public class ListTest {
 

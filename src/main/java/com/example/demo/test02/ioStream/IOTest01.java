@@ -7,10 +7,8 @@ import org.springframework.core.io.ClassPathResource;
 import java.io.*;
 
 /**
- * @Author FLY
- * @Createdate 2019-12-16 13:48
- * @ProjectName Test01
- * @Desc com.example.demo.test02.ioStream
+ * @author FLY
+ * @date 2019-12-16 13:48
  */
 @Slf4j
 public class IOTest01 {

@@ -8,10 +8,8 @@ import java.io.InputStream;
 import java.util.Properties;
 
 /**
- * @Author FLY
- * @CreateDate 2019-12-18 14:29
- * @ProjectName Test01
- * @Desc
+ * @author FLY
+ * @date 2019-12-18 14:29
  */
 public class JedisPoolUtils {
 
@@ -28,11 +26,15 @@ public class JedisPoolUtils {
         }
 
         //获得池子对象
-        JedisPoolConfig poolconfig = new JedisPoolConfig();
-        poolconfig.setMaxIdle(Integer.parseInt(pro.get("redis.maxIdle").toString()));//最大闲置个数
-        poolconfig.setMinIdle(Integer.parseInt(pro.get("redis.minIdle").toString()));//最小闲置个数
-        poolconfig.setMaxTotal(Integer.parseInt(pro.get("redis.maxTotal").toString()));//最大连接数
-        pool = new JedisPool(poolconfig,pro.getProperty("redis.url"), Integer.parseInt(pro.get("redis.port").toString()));
+        JedisPoolConfig poolConfig = new JedisPoolConfig();
+        poolConfig.setMaxIdle(Integer.parseInt(pro.get("redis.maxIdle").toString()));//最大闲置个数
+        poolConfig.setMinIdle(Integer.parseInt(pro.get("redis.minIdle").toString()));//最小闲置个数
+        poolConfig.setMaxTotal(Integer.parseInt(pro.get("redis.maxTotal").toString()));//最大连接数
+        pool = new JedisPool(poolConfig,pro.getProperty("redis.url"), Integer.parseInt(pro.get("redis.port").toString()));
+
+    }
+
+    public void test(){
 
     }
 }

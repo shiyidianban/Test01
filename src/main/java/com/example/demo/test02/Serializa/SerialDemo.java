@@ -6,10 +6,8 @@ import java.io.*;
 import java.util.Date;
 
 /**
- * @Author FLY
- * @CreateDate 2019-12-17 13:57
- * @ProjectName Test01
- * @Desc
+ * @author FLY
+ * @date 2019-12-17 13:57
  */
 public class SerialDemo {
 

@@ -8,10 +8,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.StringRedisTemplate;
 
 /**
- * @Author FLY
- * @CreateDate 2019-12-18 10:19
- * @ProjectName Test01
- * @Desc Redis基本练习，需要启动Springboot从配置文件中获取redis连接
+ * @author FLY
+ * @date 2019-12-18 10:19
+ Redis基本练习，需要启动Springboot从配置文件中获取redis连接
  */
 @SpringBootTest
 public class RedisTest {

@@ -12,10 +12,8 @@ import java.util.Iterator;
 import java.util.Set;
 
 /**
- * @Author FLY
- * @CreateDate 2019-12-17 11:39
- * @ProjectName Test01
- * @Desc
+ * @author FLY
+ * @date 2019-12-17 11:39
  */
 public class MultiPortEcho {
     private int ports[];

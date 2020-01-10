@@ -4,10 +4,8 @@ import java.lang.reflect.Method;
 import java.util.Date;
 
 /**
- * @Author FLY
- * @Createdate 2019-12-14 16:06
- * @ProjectName Test01
- * @Desc com.example.demo.test02.clazz
+ * @author FLY
+ * @date 2019-12-14 16:06
  */
 public class ReflectionMethods {
 

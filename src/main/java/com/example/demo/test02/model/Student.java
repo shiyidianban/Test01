@@ -3,10 +3,8 @@ package com.example.demo.test02.model;
 import java.util.Date;
 
 /**
- * @Author FLY
- * @Createdate 2019-12-14 15:51
- * @ProjectName Test01
- * @Desc com.example.demo.test02.model
+ * @author FLY
+ * @date 2019-12-14 15:51
  */
 public class Student {
 

@@ -4,10 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
- * @Author FLY
- * @CreateDate 2019-12-18 10:54
- * @ProjectName Test01
- * @Desc
+ * @author FLY
+ * @date 2019-12-18 10:54
  */
 @Getter
 @AllArgsConstructor

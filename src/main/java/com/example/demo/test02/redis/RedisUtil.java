@@ -10,10 +10,8 @@ import java.util.List;
 
 
 /**
- * @Author FLY
- * @CreateDate 2019-12-18 11:21
- * @ProjectName Test01
- * @Desc
+ * @author FLY
+ * @date 2019-12-18 11:21
  */
 @Slf4j
 public class RedisUtil {

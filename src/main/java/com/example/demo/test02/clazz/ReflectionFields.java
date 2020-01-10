@@ -3,10 +3,8 @@ package com.example.demo.test02.clazz;
 import java.lang.reflect.Field;
 
 /**
- * @Author FLY
- * @Createdate 2019-12-14 16:02
- * @ProjectName Test01
- * @Desc com.example.demo.test02.clazz
+ * @author FLY
+ * @date 2019-12-14 16:02
  */
 public class ReflectionFields {
 

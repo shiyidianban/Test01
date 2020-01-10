@@ -7,10 +7,10 @@ import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
 /**
- * @Author FLY
- * @CreateDate 2019-12-18 10:58
- * @ProjectName Test01
- * @Desc 连接池配置
+ * 连接池配置
+ *
+ * @author FLY
+ * @date 2019-12-18 10:58
  */
 public class RedisTest03 {
 
@@ -28,21 +28,21 @@ public class RedisTest03 {
     }
 
     @Test
-    public void testPing(){
+    public void testPing() {
         // Jedis 实现了java.lang.AutoCloseable接口,所以这里可以用java 1.7 try-with-resources语法自动完成close
-        try(Jedis jedis = pool.getResource()){
+        try (Jedis jedis = pool.getResource()) {
             //查看服务是否运行 PING
-            System.out.println("服务正在运行: "+jedis.ping());
+            System.out.println("服务正在运行: " + jedis.ping());
         }
     }
 
     @Test
-    public void testString(){
-        try(Jedis jedis = pool.getResource()){
+    public void testString() {
+        try (Jedis jedis = pool.getResource()) {
             //设置 redis 字符串数据 SET 10km blog.csdn.net/10km
             jedis.set("10km", "blog.csdn.net/10km");
             // 获取存储的数据并输出
-            System.out.println("redis 存储的字符串为: "+ jedis.get("10km"));
+            System.out.println("redis 存储的字符串为: " + jedis.get("10km"));
         }
     }
 }

@@ -1,10 +1,9 @@
 package com.example.demo.test02.suanfa;
 
 /**
- * @Author FLY
- * @CreateDate 2019-12-19 17:40
- * @ProjectName Test01
- * @Desc 背包问题
+ * @author FLY
+ * @date 2019-12-19 17:40
+ * 背包问题
  * 在N件物品取出若干件放在容量为W的背包里，每件物品的体积为W1，W2……Wn（Wi为整数），与之相对应的价值为P1,P2……Pn（Pi为整数）。求背包能够容纳的最大价值。
  */
 public class DynamicTest05 {

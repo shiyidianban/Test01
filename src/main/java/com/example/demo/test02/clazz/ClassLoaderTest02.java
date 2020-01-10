@@ -4,10 +4,8 @@ import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @Author FLY
- * @Createdate 2019-12-14 10:39
- * @ProjectName Test01
- * @Desc com.example.demo.test02.clazz
+ * @author FLY
+ * @date 2019-12-14 10:39
  */
 @Slf4j
 public class ClassLoaderTest02 {

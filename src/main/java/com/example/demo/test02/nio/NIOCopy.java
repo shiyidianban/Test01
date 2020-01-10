@@ -7,10 +7,9 @@ import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
 /**
- * @Author FLY
- * @Createdate 2019-12-17 11:04
- * @ProjectName Test01
- * @Desc com.example.demo.test02.nio
+ * @author FLY
+ * @date 2019-12-17 11:04
+ com.example.demo.test02.nio
  * 拷贝文件
  */
 public class NIOCopy {

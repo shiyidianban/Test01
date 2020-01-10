@@ -4,10 +4,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * @Author FLY
- * @CreateDate 2019-12-18 11:37
- * @ProjectName Test01
- * @Desc
+ * @author FLY
+ * @date 2019-12-18 11:37
  */
 public class RedisTest04 {
 

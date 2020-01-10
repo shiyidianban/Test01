@@ -5,10 +5,9 @@ import lombok.SneakyThrows;
 import java.util.concurrent.*;
 
 /**
- * @Author FLY
- * @Createdate 2019-12-12 16:15
- * @ProjectName Test01
- * @Desc com.example.demo.test01.thread
+ * @author FLY
+ * @date 2019-12-12 16:15
+ com.example.demo.test01.thread
  */
 public class ExecutorSingleThreadExecutor {
 

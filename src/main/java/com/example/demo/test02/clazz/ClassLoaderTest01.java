@@ -3,10 +3,8 @@ package com.example.demo.test02.clazz;
 import lombok.Data;
 
 /**
- * @Author FLY
- * @Createdate 2019-12-14 10:37
- * @ProjectName Test01
- * @Desc com.example.demo.test02.clazz
+ * @author FLY
+ * @date 2019-12-14 10:37
  */
 @Data
 public class ClassLoaderTest01 {
