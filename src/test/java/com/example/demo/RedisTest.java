@@ -10,7 +10,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 /**
  * @author FLY
  * @date 2019-12-18 10:19
- Redis基本练习，需要启动Springboot从配置文件中获取redis连接
+ * Redis基本练习，需要启动Springboot从配置文件中获取redis连接
  */
 @SpringBootTest
 public class RedisTest {
@@ -19,22 +19,22 @@ public class RedisTest {
     private RedisTest01 redisTest01;
 
     @Test
-    public void getStringRedisTemplate(){
+    public void getStringRedisTemplate() {
         redisTest01.getStringRedisTemplate();
     }
 
     @Test
-    public void setStringRedisTemplate(){
+    public void setStringRedisTemplate() {
         redisTest01.setStringRedisTemplate();
     }
 
     @Test
-    public void getRedisTemplate(){
+    public void getRedisTemplate() {
         redisTest01.getRedisTemplate();
     }
 
     @Test
-    public void setRedisTemplate(){
+    public void setRedisTemplate() {
         redisTest01.setRedisTemplate();
     }
 }
