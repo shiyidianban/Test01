@@ -29,15 +29,21 @@ public class LockTest01 implements Runnable {
     }
 
     private static void testVolatile() {
+        lock.lock();
+        try {
 
-        for (int i = 0; i < 10000; i++) {
-            id = id + 1;
+            for (int i = 0; i < 10000; i++) {
+                id = id + 1;
+            }
+
+            log.info(String.format("当前时间：%s：%s，当前线程：%s，id = %d",
+                    System.currentTimeMillis(),
+                    System.nanoTime(),
+                    Thread.currentThread().getName(),
+                    id));
+        } finally {
+            lock.unlock();
         }
-        log.info(String.format("当前时间：%s：%s，当前线程：%s，id = %d",
-                System.currentTimeMillis(),
-                System.nanoTime(),
-                Thread.currentThread().getName(),
-                id));
 
 
     }
