@@ -41,14 +41,12 @@ public class TestThread02 {
 
         t1.start();
 
-
-        Thread t2 = new Thread() {
-            public void run() {
-                while (!leesin.isDead()) {
-                    bh.attackHero(leesin);
-                }
+        Thread t2 = new Thread(() -> {
+            while (!leesin.isDead()) {
+                bh.attackHero(leesin);
             }
-        };
+        });
+
         t2.start();
 
         Thread t3 = new Thread() {
