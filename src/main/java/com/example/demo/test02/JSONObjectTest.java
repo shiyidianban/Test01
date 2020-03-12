@@ -20,4 +20,22 @@ public class JSONObjectTest {
             System.out.println(str);
         }
     }
+
+    public static Integer valueOf(String str){
+        if (str == null){
+            return null;
+        }
+
+        char[] list = str.toCharArray();
+        int num = 0;
+        int zero = 1;
+        for(int i = list.length - 1; i >= 0 ; i--){
+            if(0 <= list[i] && list[i] <= 9){
+                num = num + list[i] * zero;
+                zero = zero * 10;
+            }
+        }
+
+        return num;
+    }
 }
