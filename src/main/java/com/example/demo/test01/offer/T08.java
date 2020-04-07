@@ -8,7 +8,7 @@ package com.example.demo.test01.offer;
  */
 public class T08 {
 
-    public int minNumberInRotateArray(int[] array) {
+    public static int minNumberInRotateArray(int[] array) {
         if (array == null || array.length == 0)
             return 0;
         int left = 0;
@@ -36,6 +36,11 @@ public class T08 {
             }
         }
         return array[mid];
+    }
+
+    public static void main(String[] args) {
+        int[] n = new int[]{3, 4, 5, 2, 2, 6, 8, 3, 5};
+        System.out.println(minNumberInRotateArray(n));
     }
 
 }

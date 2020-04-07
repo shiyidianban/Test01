@@ -10,8 +10,8 @@ public class DynamicTest05 {
 
     public static void main(String[] args) {
 
-        int[] price = {0, 1, 2, 3};
         int[] weight = {0, 2, 3, 1};
+        int[] price = {0, 1, 2, 3};
         int n = weight.length - 1;
         int w = 5;
         int[] dp = new int[w + 1];
