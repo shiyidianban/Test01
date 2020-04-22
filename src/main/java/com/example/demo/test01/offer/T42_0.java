@@ -7,6 +7,11 @@ package com.example.demo.test01.offer;
  */
 public class T42_0 {
 
+    public static void main(String[] args) {
+        T42_0 t21 = new T42_0();
+        System.out.println(t21.ReverseSentence("asdfgh DSFGF dgdfg"));
+    }
+
     public String ReverseSentence(String str) {
         if (str == null || str.length() == 0)
             return str;

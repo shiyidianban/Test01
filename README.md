@@ -7,6 +7,17 @@ java知识点框架
 ### 1.八种排序方法
 package 位置：[com.example.demo.test01.sort](src/main/java/com/example/demo/test01/sort)
 
+|     名称      | 时间复杂度      |   最差          |    最好       |  状态           |空间复杂度     |
+| :----------: | :----------:   | :----------:   | :----------:  |  :----------:  |:----------:   |
+| 二叉树排序    | O(n2)          |O(n2)	     |      O(n*log2n)	 |   不稳定        |       O(n)   |
+| 冒泡排序      | O(n2)          |O(n2)	     |      O(n2)    	 |     稳定        |       O(1)   |
+| 堆排序        | O(n*log2n)     |O(n*log2n) |      O(n*log2n)	 |   不稳定        |       O(1)   |
+| 插入排序      | O(n2)          |O(n2)	     |      O(n2)    	 |     稳定        |       O(n)   |
+| 快速排序      | O(n2)          |O(n2)	     |      O(n*log2n)	 |   不稳定        |       O(log2n)~O(n)   |
+| 选择排序      | O(n2)          |O(n2)	     |      O(n2)	     |     稳定        |       O(1)   |
+| 希尔排序      | O              |O    	     |      O        	 |   不稳定        |       O(1)   |
+
+
 ### 2.剑指offer
 package 位置：[com.example.demo.test01.offer](src/main/java/com/example/demo/test01/offer)
 
