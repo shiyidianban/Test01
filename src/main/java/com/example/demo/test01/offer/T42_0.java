@@ -9,7 +9,21 @@ public class T42_0 {
 
     public static void main(String[] args) {
         T42_0 t21 = new T42_0();
-        System.out.println(t21.ReverseSentence("asdfgh DSFGF dgdfg"));
+        System.out.println(t21.ReverseSentence1("asdfgh DSFGF dgdfg"));
+    }
+
+    public String ReverseSentence1(String str) {
+        if (str == null || str.length() == 0)
+            return str;
+        if (str.trim().length() == 0)
+            return str;
+        StringBuilder sb = new StringBuilder();
+        String[] s = str.split(" ");
+        for (int i = s.length - 1; i >= 0; i--) {
+            sb.append(s[i] + " ");
+        }
+
+        return String.valueOf(sb);
     }
 
     public String ReverseSentence(String str) {

@@ -6,12 +6,16 @@ package com.example.demo.test01.offer;
  * 思路：a&(a-1)的结果会将a最右边的1变为0，直到a = 0，还可以先将a&1 != 0，然后右移1位，但不能计算负 数的值，
  */
 public class T10 {
-    public int NumberOf1(int n) {
+    public static int NumberOf1(int n) {
         int count = 0;
         while (n != 0) {
             count++;
-            n = (n - 1) & n;
+            n = n & (n - 1);
         }
         return count;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(NumberOf1(7));
     }
 }

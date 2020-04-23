@@ -4,14 +4,14 @@ package com.example.demo.test01.offer;
  * @author wu161 2018年8月26日下午6:55:52 打印1到最大的n位数
  */
 public class T12 {
-    public void printToMaxOfNDigits(int n) {
+    public static void printToMaxOfNDigits(int n) {
         int[] array = new int[n];
         if (n <= 0)
             return;
         printArray(array, 0);
     }
 
-    private void printArray(int[] array, int n) {
+    private static void printArray(int[] array, int n) {
         for (int i = 0; i < 10; i++) {
             if (n != array.length) {
                 array[n] = i;
@@ -32,5 +32,9 @@ public class T12 {
                 return;
             }
         }
+    }
+
+    public static void main(String[] args) {
+        printToMaxOfNDigits(4);
     }
 }
