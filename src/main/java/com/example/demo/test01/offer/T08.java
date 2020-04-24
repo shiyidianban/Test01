@@ -39,7 +39,7 @@ public class T08 {
     }
 
     public static void main(String[] args) {
-        int[] n = new int[]{3, 4, 5, 2, 2, 6, 8, 3, 5};
+        int[] n = new int[]{3, 4, 5, 6, 8, 1, 2};
         System.out.println(minNumberInRotateArray(n));
     }
 
