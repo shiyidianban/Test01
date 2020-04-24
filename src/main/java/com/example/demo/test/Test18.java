@@ -2,25 +2,34 @@ package com.example.demo.test;
 
 public class Test18 {
     public static void main(String[] args) {
-//        Scanner sc = new Scanner(System.in);
-//        String n = sc.nextLine();
-//        Map<String,String> map = new HashMap<>();
-//        Set<String> set = new HashSet<>();
-//        while(n != null){
-//            map.put(n.split(" ")[1],n.split(" ")[0]);
-//            set.add(n.split(" ")[0]);
-//            set.add(n.split(" ")[1]);
-//            n = sc.nextLine();
-//        }
-//
-//        String s = (String) set.toArray()[2];
-//        int[][] num = new int[set.size()][set.size()];
-//        for (int i = 0 ; i < num.length ; i++){
-//            for (int j = i ; j < num.length ; j++){
-//
-//            }
-//        }
-        System.out.println(4.0 - 3.6);
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+        head = Test18.reverseList(head);
+
+        while (head != null){
+            System.out.println(head.val);
+            head = head.next;
+        }
     }
 
+    public static ListNode reverseList(ListNode head){
+        while (head.next != null){
+            ListNode n = reverseList(head.next);
+            head.next = head.next.next;
+            n.next = head;
+            head = n;
+        }
+
+        return head;
+    }
+
+}
+
+class ListNode{
+    int val;
+    ListNode next;
+    ListNode(int x){
+        val = x;
+    }
 }
