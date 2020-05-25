@@ -17,7 +17,7 @@ public class SelectionSort {
                     k = j;
                 }
             }
-            // 将最小值放到排序序列末尾
+            // 将最小值放到排序序列末尾或者首位
             if (k > i) {
                 int tmp = a[i];
                 a[i] = a[k];

@@ -1,13 +1,11 @@
 package com.example.demo.test02;
 
+import org.springframework.scheduling.concurrent.CustomizableThreadFactory;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 /**
  * @author FLY
@@ -186,15 +184,16 @@ public class UniqueOrderGenerate {
 
 
         UniqueOrderGenerate idWorker = new UniqueOrderGenerate(0, 0);
+        ThreadFactory threadFactory = new CustomizableThreadFactory();
         ExecutorService executorService = new ThreadPoolExecutor(50, 50, 0, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>());
         for (int i = 0; i < 50; i++) {
             executorService.execute(new Runnable() {
                 @Override
                 public void run() {
                     Jedis jedis = pool.getResource();
-                    for (int i = 0; i < 10000; i++) {
-//                        String id = String.valueOf(idWorker.nextId());
-                        String id = CodeUtils.uniqueCode();
+                    for (int i = 0; i < 100; i++) {
+                        String id = String.valueOf(idWorker.nextId());
+//                        String id = CodeUtils.uniqueCode();
                         if (jedis.exists(id)) {
                             System.out.println(String.format("插入redis的id冲突；%s  %s--------", Thread.currentThread().getName(), id));
                         } else {
