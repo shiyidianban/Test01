@@ -1,7 +1,7 @@
 package com.example.demo.test02.stream;
 
 import java.util.Arrays;
-import java.util.DoubleSummaryStatistics;
+import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -55,7 +55,7 @@ public class T1 {
         Optional<Integer> reduce2 = list2.stream().reduce((x, y) -> x + y);
         System.out.println(reduce2.get());
 
-        DoubleSummaryStatistics sum = list2.stream().collect(Collectors.summarizingDouble(Double::valueOf));
+        IntSummaryStatistics sum = list2.stream().collect(Collectors.summarizingInt(item -> item));
         System.out.println(sum);
     }
 }
