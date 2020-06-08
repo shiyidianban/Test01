@@ -52,6 +52,11 @@ package 位置：[com.example.demo.test02.collectionTest](src/main/java/com/exam
 ### 9.动态规划问题            
 package 位置：[com.example.demo.test02.suanfa](src/main/java/com/example/demo/test02/suanfa)
 
+### 10.Java锁机制            
+package 位置：[com.example.demo.test02.lockTest](src/main/java/com/example/demo/test02/lockTest)
+
+### 10.Java内存详解            
+[网址](https://www.nowcoder.com/discuss/151138?type=1)
 
 ## 其他模版代码
 ### 1.word转pdf
