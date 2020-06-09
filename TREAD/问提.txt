@@ -36,8 +36,26 @@ java.lang.StackOverflowError ------> 不会抛OOM error，
 
 
 kafka如果解决消息重复消费，kafka在项目中怎么用的
+丢包问题：消息推送服务，每天早上，手机上各终端都会给用户推送消息，这时候流量剧增，可能会出现kafka发送数据过快，导致服务器网卡爆满，或者磁盘处于繁忙状态，可能会出现丢包现象。
+
+解决方案：首先对kafka进行限速， 其次启用重试机制，重试间隔时间设置长一些，最后Kafka设置acks=all，即需要相应的所有处于ISR的分区都确认收到该消息后，才算发送成功。
+
+重复消费最常见的原因：re-balance问题,通常会遇到消费的数据，处理很耗时，
+导致超过了Kafka的session timeout时间（0.10.x版本默认是30秒），那么就会re-balance重平衡，
+此时有一定几率offset没提交，会导致重平衡后重复消费。 
+
+保证不丢失消息：生产者（ack=all 代表至少成功发送一次)     重试机制
+
+消费者 （offset手动提交，业务逻辑成功处理后，提交offset） 
+
+保证不重复消费：落表（主键或者唯一索引的方式，避免重复数据） 
+
+业务逻辑处理（选择唯一主键存储到Redis或者mongdb中，先查询是否存在，若存在则不处理；
+若不存在，先插入Redis或Mongdb,再进行业务逻辑处理）
 
 es和传统数据库的区别
+Relational DB -> Databases -> Tables -> Rows -> Columns
+Elasticsearch -> Indices -> Types -> Documents -> Fields
 
 超卖问题如何解决
 
