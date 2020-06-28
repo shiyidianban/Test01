@@ -29,9 +29,13 @@ RedisTemplate与StringRedisTemplate
     - StringRedisTemplate采用String的序列化策略
 
 RedisTemplate使用的序列类在在操作数据的时候，比如说存入数据会将数据先序列化成字节数组然后在存入Redis数据库，这个时候打开Redis查看的时候，你会看到你的数据不是以可读的形式展现的，而是以字节数组显示，类似下面
+
+
 ![redis01.jpg](../../../../../../resources/img/redis01.jpg)
 
 当然从Redis获取数据的时候也会默认将数据当做字节数组转化，这样就会导致一个问题，当需要获取的数据不是以字节数组存在redis当中而是正常的可读的字符串的时候，比如说下面这种形式的数据
+
+
 ![redis02.jpg](../../../../../../resources/img/redis02.jpg)  
 - 注：使用的软件是RedisDesktopManager
 
