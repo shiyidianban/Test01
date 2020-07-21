@@ -1,5 +1,7 @@
 package com.example.demo.note;
 
+import java.lang.ref.WeakReference;
+import java.util.WeakHashMap;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.concurrent.locks.StampedLock;
@@ -32,6 +34,8 @@ public class T1 {
         T1 t1 = new T1();
         t1.addTT(n);
         System.out.println(n);
+
+//        WeakReference t = new WeakReference();
 
         P p = new P();
         p.i = 2;

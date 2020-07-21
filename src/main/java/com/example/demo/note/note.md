@@ -160,11 +160,11 @@ XX参数
 3. jinfo -flag  具体参数 java进程编号 查看某个参数的赋值，或者使用情况   
    
 第二种，查看参数盘点家底 
-java -XX：+PrintFlagsInitial 查看所有的 初始默认值 
+java -XX:+PrintFlagsInitial 查看所有的 初始默认值 
 
-java -XX：+PrintFlagsFinal 查看所有修改更新的内容，运行java命令的同事的打印出参数
+java -XX:+PrintFlagsFinal 查看所有修改更新的内容，运行java命令的同事的打印出参数
 
-java -XX：+PrintCommandLineFlags -version 查看常用符号
+java -XX:+PrintCommandLineFlags -version 查看常用符号
 
 >在java8中，永久代已经被移除了，被一个称为元空间的区域所取代。
 >元空间的本质和永久代类似.
@@ -194,9 +194,157 @@ java -XX：+PrintCommandLineFlags -version 查看常用符号
            不过元空间与永久代之间的最大区别在于：元空间并不在虚拟机中，而是使用本地内存。
            因此，默认情况下，元空间的带下仅受本地内存限制
         * -Xms10m -Xmx10m -XX:MetaspaceSize=1024m -XX:+PrintFlagsFinal
- 
+-XX：SurvivorRatio 幸存区比例
+—XX：NewRatio 年轻代比例
+—XX：MaxTenuringThreshold    幸存区交换次数，设置垃圾最大年龄     
 
+当内存不足，JVM开始垃圾回收，对于强引用的对象，就算是出现了OOM也不会对该对象进行回收，死都不回收
+
+1. 强引用
+> 强引用时我们最常见的普通对象引用，只要还有强引用指向一个对象，就能表明对象还活着，
+>垃圾收集器不会碰这种对象。在Java中最常见的就是强引用，把一个对象赋给一个引用变量，
+>这个引用变量就是一个强引用。当一个对象被强引用用变量引用是，它处于可达状态，它是不可能被
+>垃圾回收机制回收的，即使该对象以后永远都不会被利用到JVM也不会回收。因此强引用是造成Java内存
+>泄漏的主要原因之一。
+
+>对一个普通的对象，如果没有其他的引用关系，只要超过了引用的作用域或者显式地将相应引用赋值为null
+>一般认为就是可以被垃圾收集的了
  
+2. 软引用
+>软引用是一种相对强引用弱化了一些的引用，需要用java.lang.ref.SoftReference类来实现，可以让对象豁免一些垃圾集。
+>对于只有软引用的对象来说：
+>   当系统内存充足时，它不会被回收
+>   当系统内存不足时，它会被回收
+>软引用通常用在对内存对象敏感的程序中，比如高速缓存就有用到软引用，内存足够的时候就保留，不够用就回收
+
+3. 弱引用
+>弱引用需要用java.lang.ref.WeakReference类来实现，它比软引用的生存期更短，
+>对于只有弱引用的对象来说，只要垃圾回收机制一运行，不管JVM的内存是否足够，都会回收该对象占用的内存。
+ 
+软引用和弱引用的使用场景
+假如有一个应用需要读取大量的本地图片：
+    * 如果每次读取图片都要从硬盘中读取则会严重影响性能，
+    * 如果一次性全部加载到内存中又可能造成内存溢出。
+此时使用软引用可以解决这个问题
+    设计思路是：用一个HashMap来保存图片的路径和相应图片对像关联的软引用之间的映射关系，
+在内存不足时，JVM会自动回收这些缓存图片对象所占用的空间，从而有效地避免了OOM的问题
+Map<String,SoftReference<Bitmap>> imageCache = new HashMap<String,SoftReference<Bitmap>>();
 
 
+
+>java提供了4种引用类型，在垃圾回收的时候，都有各自的特点。
+ReferenceQueue是用来配合引用工作的，没有ReferenceQueue一样运行。
+
+>创建引用的时候可以指定关联的队列，当GC释放对象内存的时候，会将引用加入到引用队列，
+>如果程序发现某个虚引用已经被加入到引用队列，那么就可以在所引用的对象的内存在被回收之前采取必要的行动
+>这相当于是一种通知机制
+
+>当关联的引用队列中有数据的时候，意味着引用指向的堆内存中的对象被回收。通过这种方式，JVM
+>允许我们在对象被销毁后，做一些我们自己想做的事情。
+
+垃圾回收算法：
+引用计数法
+可达性分析法
+标记整理，
+标记清除
+复制法
+
+垃圾回收器：
+四种主要垃圾收集器
+Serial，Parallel，CMS，G1，ZGC
+
+Serial 串行化回收
+>它为单线程环境设计且只使用一个线程进行垃圾回收，会暂停所有的用户线程，所以不适合服务器环境
+
+Parallel 并行垃圾回收器
+>多个垃圾收集线程并行工作，此时用户线程是暂停的，适用于科学计算/大数据处理首台处理等弱交互场景
+
+CMS 并发垃圾回收器
+>用户线程和GC线程同时执行（不一定是并行，交替执行），不需要停顿用户线程，
+>互联网公司多用，适用对响应时间有要求的场合。
+
+G1 垃圾回收器
+>G1垃圾回收器将堆内存分割成不同的区域然后并发的对其进行垃圾回收
+
+
+垃圾回收方式
+
+>UseSerialGC,UseSerialOldGC(已被弃用)
+>UseParallelGC,
+>UseConcMarkSweepGC,
+>UserParNewGC,
+>UserParallelOldGC,
+>UserG1GC
+
+Young Gen:
+Serial Copying，Parallel Scavenge ParNew
+
+Old Gen: 
+Serial MSC，Parallel Compacting，CMS
+
+G1   
+
+查看垃圾回收
+
+
+- 串行回收
+- 并行回收
+- G1
+
+####名词解析
+DefNew -> Default New Generation
+
+Tenured -> Old
+
+ParNew -> Parallel New Generation
+
+PSYoungGen -> Parallel Scavenge
+
+ParOldGen -> Parallel   Old Generation
+
+####新生代->老年代
+
+Serial -> Serial Old(MSC)
+
+ParNew -> CMS
+
+Parallel Scavenge -> Parallel Old
+
+Parallel Scavenge -> Serial Old(MSC)
+
+####新生代：
+
+串行收集器：Serial收集器
+>一个单线程的收集器，在进行垃圾收集的时候，必须暂停其他所有的工作线程直到它收集结束。
+
+并行收集器：ParNewGeneration收集器
+>ParNew收集器其实就是Serial收集器新生代的并行多线程版本，最常见的应用场景是配合老年代的CMS
+>GC工作，其余的行为和Serial收集器完全一样，ParNew垃圾收集器在垃圾手气过程中同样也要暂停所有其他的工作线程。
+>它是很多java虚拟机运行在Server模式下的新生代的默认收集器。
+>常用的对应JVM参数：-XX:+UserParNewGC，启用ParNew收集器，只影响新生代的收集，不影响老年代。
+>开启上述参数后，会使用：ParNew（Young区用）+SerialOld的收集器组合，新生代使用复制算法，老年代采用标记-整理算法
+>但是，ParNew+Tenured这样的搭配，java8不再推荐
+>-XX:ParallelGCThreads限制线程数量，默认开启和CPU数目相同的线程数
  
+Parallel Scavenge收集器
+>类似ParNew也是一个新生代垃圾收集器，使用复制算法，也是一个并行的多线程的垃圾收集器，
+>俗称吞吐量优先收集器。一句话：穿行收集器在新生代和老年代的并行化
+>
+>它重点关注的是：
+>可控制的吞吐量（Thoughput=运行用户代码时间/(运行用户代码时间+垃圾收集时间)），
+>也既比如程序运行100分钟，垃圾收集时间1分钟，吞吐量即使99%。
+>高吞吐量意味这高效利用CPU的时间，它多用于后台运算而不需要太多交互的任务。
+>
+>自适应调节策略也是ParallelScavenge收集器与ParNew收集器的一个重要区别。
+>(自适应调节策略：虚拟机会根据当前系统的运行情况手机性能监控信息，动态调整这些参数
+>以提供最合适的停顿时间(-XX:MaxGCPauseMillis)或最大的吞吐量。)
+
+####老年代
+
+
+
+-XX:+useSerialGC(DefNew+Tenured)
+-XX:+useParNewGC(ParNew+Tenured)
+-XX:+useParallelGC(PSYoungGen+ParOldGen)
+-XX:+useParallelOldGC(PSYoungGen+ParOldGen)
+默认(PSYoungGen+ParOldGen)
