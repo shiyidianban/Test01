@@ -11,5 +11,6 @@ public interface Test04 {
 
     public void test();
 
+    public void te();
 
 }

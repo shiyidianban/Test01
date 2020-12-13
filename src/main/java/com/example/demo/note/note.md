@@ -300,7 +300,7 @@ ParNew -> Parallel New Generation
 
 PSYoungGen -> Parallel Scavenge
 
-ParOldGen -> Parallel   Old Generation
+ParOldGen -> Parallel Old Generation
 
 ####新生代->老年代
 
@@ -312,12 +312,18 @@ Parallel Scavenge -> Parallel Old
 
 Parallel Scavenge -> Serial Old(MSC)
 
+####执行垃圾回收器命令
+- —XX:+UseParNewGC(ParNew + Tenured)
+- —XX:+UseParallelGC(PSYoungGen + ParOldGen)
+- —XX:+UseParallelOldGC(PSYoungGen + ParOldGen)(不加默认就是该垃圾回收器)
+- —XX:+UseConcMarkSweepGC(ParNew + CMS)
+- —XX:+UserG1GC()
 ####新生代：
 
 串行收集器：Serial收集器
 >一个单线程的收集器，在进行垃圾收集的时候，必须暂停其他所有的工作线程直到它收集结束。
 
-并行收集器：ParNewGeneration收集器
+并行收集器：ParNew Generation收集器
 >ParNew收集器其实就是Serial收集器新生代的并行多线程版本，最常见的应用场景是配合老年代的CMS
 >GC工作，其余的行为和Serial收集器完全一样，ParNew垃圾收集器在垃圾手气过程中同样也要暂停所有其他的工作线程。
 >它是很多java虚拟机运行在Server模式下的新生代的默认收集器。
@@ -340,8 +346,37 @@ Parallel Scavenge收集器
 >以提供最合适的停顿时间(-XX:MaxGCPauseMillis)或最大的吞吐量。)
 
 ####老年代
+ParallelOld收集器
+>ParallelOld收集器是Parallel Scavenge的老年代版本，使用多线程的标记-整理算法
+>Parallel Old收集器在JDK1.6才开始提供。
+>在JDK1.6之前，新生代使用Parallel Scavenge收集器只能搭配老年代的Serial Old收集器
+>只能保证新生代的吞吐量优先，无法保整整体的吞吐量。在JDK1.6之前（Parallel Scavenge+Serial Old）
+>JVM常用参数：
+>-XX:+UseParallelGC 使用Parallel Old收集器，设置该参数后，新生代Parallel+老年代ParallelOld
 
-
+CMS收集器
+>采用标记清楚
+>CMS收集器（Concurrent Mark Sweep： 并发标记清除）是一种以获取最短回收停顿时间为目标的收集器
+>适合应用在互联网站或者B/S系统的服务器上，这类应用尤其重视服务器的相应速度，希望系统停顿时间最短
+>CMS非常适合堆内存大、CPU核数多的服务器端应用，也是G1出现之前大型应用的首选收集器
+>初始标记(停顿)-> 并发标记->重新标记(停顿)->并发清除
+>初始标记：只是标记一下GC ROOT能直接关联的对象，速度很快，仍然需要暂停所有的工作线程
+>并发标记：进行GC ROOT跟踪的过程，和用户线程一起工作，不需要暂停工作线程。主要标记过程，标记全部对象
+>重新标记：为了修正在并发标记期间，因用户程序继续运行而导致标记产生变动的那一部分对象的标记记录，仍然需要暂停所有的工作线程。
+>         由于并发标记时，用户线程依然运行，因此在正式清理前，再做修正
+>并发清除：清除GC不可达对象，和用户线程一起工作，不需要暂停工作线程。基于标记结果，直接清理对象
+>         由于耗时最长的并发标记和并发清除过程中，垃圾收集线程可以和用户现在一起并发工作，
+>         所以总体上来看CMS收集器的内存回收和用户线程是一起并发地执行 
+>Concurrent Mark Sweep 并发标记清楚，并发收集低停顿，并发指的是与用户线程一起执行
+>-XX:UseConcMarkSweepGC 开启该参数后自动将会-XX:UseParNewGC打开
+>开启该参数后，使用ParNew(Young区用)+CMS(Old区用)+Serial Old的收集器组合，
+>Serial Old将作为CMS出错的后备收集器
+>优点：并发收集低停顿
+>缺点：并发标记，对CPU资源压力大
+>     采用的标记清除算法会导致大量碎片 
+>     由于并发标记，CMS在收集与应用线程会同时会增加对堆内存的占用，也就是说，CMS必须要在老年代
+>     堆内存用尽之前完成垃圾回收，否则CMS回收失败时，将触发担保机制，串行老年代收集器将会以
+>     STW的方式进行一次GC，从而造成较大停顿时间 
 
 -XX:+useSerialGC(DefNew+Tenured)
 -XX:+useParNewGC(ParNew+Tenured)

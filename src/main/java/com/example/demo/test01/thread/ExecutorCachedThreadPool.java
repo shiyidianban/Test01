@@ -21,7 +21,6 @@ public class ExecutorCachedThreadPool {
             }
 
             cachedThreadPool.execute(new Runnable() {
-
                 @Override
                 public void run() {
                     System.out.println(index);

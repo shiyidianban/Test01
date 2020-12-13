@@ -1,5 +1,7 @@
 package com.example.demo.note;
 
+import com.example.demo.test01.offer.T03;
+
 import java.lang.ref.WeakReference;
 import java.util.WeakHashMap;
 import java.util.concurrent.Semaphore;
@@ -21,7 +23,7 @@ public class T1 {
     }
 
     public static void main(String[] args) {
-
+        T03  t = new T03();
 
         Semaphore semaphore  = new Semaphore(6);
         try {

@@ -4,7 +4,7 @@ package com.example.demo.test01.offer;
  * @author wu161 2018年8月26日下午12:26:20 将一个字符串中的空格替换成“%20”。 例如，当字符串为We Are
  * Happy.则经过替换之后的字符串为We%20Are%20Happy。
  */
-public class T04 {
+public class T04 extends T03{
 
     public String replaceSpace(StringBuffer str) {
         if (str == null)
@@ -19,4 +19,9 @@ public class T04 {
         }
         return String.valueOf(sb);
     }
+
+    public boolean find(int[][] array, int target){
+        return true;
+    }
+
 }
