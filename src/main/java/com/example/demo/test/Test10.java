@@ -29,3 +29,9 @@ public class Test10 {
 
     }
 }
+
+interface f {
+    public void test();
+
+    public void test1();
+}
