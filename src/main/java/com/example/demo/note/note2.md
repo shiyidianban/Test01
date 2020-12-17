@@ -21,3 +21,11 @@ Spring有哪些优势
 Spring源码
 SpringBoot比Spring做了哪些改进
 Spring5比Spring4做了哪些改进
+
+MVCC一种机制
+
+Spring的事务一种实现原理
+
+JDK动态代理和CGLIB的区别，为什么JDK动态代理只能使用接口实现，而CGLIB可以用子类实现
+
+redis中bitmap的一个实现机制
